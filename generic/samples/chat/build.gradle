@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -65,8 +65,7 @@ kotlin {
 }
 
 repositories {
-    jcenter()
-    maven { url "https://dl.bintray.com/kotlin/ktor" }
+    mavenCentral()
 }
 
 task run(type: JavaExec, dependsOn: [backendJar]) {
